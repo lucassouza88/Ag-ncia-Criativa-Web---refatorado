@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agência Criativa Web — Design Digital</title>
+  <meta name="description" content="Agência Criativa Web — soluções em design gráfico, desenvolvimento web e branding. Site responsivo usando Flexbox, Grid e unidades relativas." />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#home" class="logo" aria-label="Agência Criativa Web — Home">
+        <svg width="40" height="40" viewBox="0 0 100 100" aria-hidden="true">
+          <rect x="10" y="10" width="80" height="80" rx="16" fill="#0f172a"></rect>
+          <text x="50" y="60" text-anchor="middle" fill="#fff" font-size="40" font-family="Arial" font-weight="700">AC</text>
+        </svg>
+        <span class="logo__text">Agência Criativa Web</span>
+      </a>
+
+      <nav class="nav" id="main-nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="#sobre" class="nav__link">Sobre Nós</a></li>
+          <li class="nav__item"><a href="#servicos" class="nav__link">Serviços</a></li>
+          <li class="nav__item"><a href="#depoimentos" class="nav__link">Depoimentos</a></li>
+          <li class="nav__item"><a href="#contato" class="nav__link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <button class="nav__toggle" id="navToggle" aria-controls="main-nav" aria-expanded="false" aria-label="Abrir menu">
+        <span class="nav__hamburger"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <h1 class="hero__title">Transformamos ideias em experiências digitais memoráveis</h1>
+          <p class="hero__lead">Design estratégico, desenvolvimento web responsivo e branding que conecta sua marca às pessoas.</p>
+          <a class="btn hero__cta" href="#contato">Solicitar orçamento</a>
+        </div>
+
+        <div class="hero__image">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80&auto=format&fit=crop"
+            srcset="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=480&q=80&auto=format&fit=crop 480w,
+                     https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80&auto=format&fit=crop 800w,
+                     https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80&auto=format&fit=crop 1200w"
+            sizes="(max-width: 600px) 90vw, (max-width: 1200px) 45vw, 600px"
+            alt="Equipe criativa trabalhando em projeto digital" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="sobre section">
+      <div class="container sobre__grid">
+        <div class="sobre__text">
+          <h2>Sobre Nós</h2>
+          <p>A Agência Criativa Web é formada por designers, desenvolvedores e estrategistas focados em criar produtos digitais que geram resultado.</p>
+          <ul class="sobre__valores">
+            <li><strong>Design centrado no usuário:</strong> interfaces acessíveis e intuitivas.</li>
+            <li><strong>Entrega ágil:</strong> processos enxutos e comunicação clara.</li>
+            <li><strong>Qualidade técnica:</strong> código limpo e otimizado.</li>
+          </ul>
+        </div>
+        <div class="sobre__image">
+          <img src="https://images.unsplash.com/photo-1557800636-894a64c1696f?w=800&q=80&auto=format&fit=crop"
+            srcset="https://images.unsplash.com/photo-1557800636-894a64c1696f?w=400&q=80&auto=format&fit=crop 400w,
+                     https://images.unsplash.com/photo-1557800636-894a64c1696f?w=800&q=80&auto=format&fit=crop 800w"
+            sizes="(max-width: 768px) 100vw, 45vw"
+            alt="Mesa com laptop e esboços de design" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos" class="servicos section">
+      <div class="container">
+        <h2>Nossos Serviços</h2>
+        <div class="servicos__grid">
+          <article class="servico__card">
+            <div class="servico__icon">🎨</div>
+            <h3>Design Gráfico</h3>
+            <p>Criação de identidade visual, material para redes sociais, e materiais impressos.</p>
+          </article>
+
+          <article class="servico__card">
+            <div class="servico__icon">💻</div>
+            <h3>Desenvolvimento Web</h3>
+            <p>Sites responsivos, PWAs e lojas online com foco em performance e conversão.</p>
+          </article>
+
+          <article class="servico__card">
+            <div class="servico__icon">🔖</div>
+            <h3>Branding</h3>
+            <p>Posicionamento de marca, guidelines e tom de voz para fortalecer sua presença.</p>
+          </article>
+
+          <article class="servico__card">
+            <div class="servico__icon">📈</div>
+            <h3>UX/UI</h3>
+            <p>Pesquisa de usuário, prototipação e testes para experiências mais efetivas.</p>
+          </article>
+
+          <article class="servico__card">
+            <div class="servico__icon">🛠️</div>
+            <h3>Manutenção & Suporte</h3>
+            <p>Atualizações, correções e otimizações contínuas para seu site ou app.</p>
+          </article>
+
+          <article class="servico__card">
+            <div class="servico__icon">📦</div>
+            <h3>Consultoria</h3>
+            <p>Planejamento estratégico e roadmap digital para seu negócio.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="depoimentos" class="depoimentos section">
+      <div class="container">
+        <h2>Depoimentos</h2>
+        <div class="depoimentos__list">
+          <blockquote class="depoimento">
+            <p>"A equipe transformou nosso site — agora temos uma presença muito mais profissional e conversões melhores."</p>
+            <footer class="depoimento__autor">— Mariana, CEO da Startup X</footer>
+          </blockquote>
+
+          <blockquote class="depoimento">
+            <p>"Ótima comunicação, prazos cumpridos e design impecável. Recomendo!"</p>
+            <footer class="depoimento__autor">— Rafael, Diretor de Marketing</footer>
+          </blockquote>
+
+          <blockquote class="depoimento">
+            <p>"Profissionais dedicados e focados em resultado. Nosso projeto foi um sucesso."</p>
+            <footer class="depoimento__autor">— Paula, Empreendedora</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="contato section">
+      <div class="container contato__grid">
+        <div class="contato__info">
+          <h2>Fale conosco</h2>
+          <p>Av. Exemplo, 1234 — Bairro Criativo, Cidade — Brasil</p>
+          <p>Telefone: (11) 99999-9999</p>
+          <p>Email: <a href="mailto:contato@agenciacriativaweb.com">contato@agenciacriativaweb.com</a></p>
+          <div class="contato__socials">
+            <a href="#">Instagram</a>
+            <a href="#">Behance</a>
+            <a href="#">LinkedIn</a>
+          </div>
+        </div>
+
+        <div class="contato__form">
+          <form id="formContato" class="form" novalidate>
+            <label for="nome" class="form__label">Nome</label>
+            <input id="nome" name="nome" type="text" class="form__input" placeholder="Seu nome" required />
+
+            <label for="email" class="form__label">E-mail</label>
+            <input id="email" name="email" type="email" class="form__input" placeholder="seu@exemplo.com" required />
+
+            <label for="mensagem" class="form__label">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" class="form__textarea" rows="6" placeholder="Como podemos ajudar?" required></textarea>
+
+            <button type="submit" class="btn form__btn">Enviar mensagem</button>
+            <p class="form__feedback" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>&copy; <span id="ano"></span> Agência Criativa Web — Todos os direitos reservados.</p>
+      <p class="footer__credit">Feito com ♥ — Responsivo • Flexbox • CSS Grid</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+    const navToggle = document.getElementById('navToggle');
+    const nav = document.getElementById('main-nav');
+    navToggle.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', !expanded);
+      nav.classList.toggle('nav--open');
+    });
+  </script>
+</body>
+</html>
