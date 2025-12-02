@@ -1,0 +1,29 @@
+// _mixins.scss
+@use 'variaveis' as v;
+
+// Centraliza com flex
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Botão reutilizável
+@mixin botao-basico($bg-color, $text-color: #ffffff) {
+  background: $bg-color;
+  color: $text-color;
+  padding: 0.9rem 1.1rem;
+  border-radius: 0.7rem;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+  text-decoration: none;
+  display: inline-block;
+
+  &:hover,
+  &:focus {
+    background: v.$accent-dark;
+    transform: translateY(-1px);
+  }
+}

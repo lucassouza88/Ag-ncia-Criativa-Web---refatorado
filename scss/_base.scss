@@ -1,0 +1,43 @@
+// _base.scss
+@use 'variaveis' as v;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: v.$ff-sans;
+  font-size: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: v.$bg;
+  color: v.$text;
+  line-height: 1.45;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(94%, v.$container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem 0;
+}
+
+/* Foco visível (acessibilidade) */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline-offset: 3px;
+  outline: 3px solid rgba(14, 165, 164, 0.12);
+}

@@ -1,0 +1,181 @@
+// _layout.scss
+@use 'variaveis' as v;
+
+.site-header {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6));
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.04);
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+  }
+}
+
+/* Hero / Banner */
+.hero {
+  padding: 3rem 0;
+  background: linear-gradient(120deg, rgba(14, 165, 164, 0.05), transparent 40%);
+
+  &-inner {
+    display: flex;
+    gap: 2rem;
+    align-items: stretch;
+    justify-content: space-between;
+    min-height: 60vh;
+  }
+
+  &-text {
+    flex: 1 1 44%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+
+    h1 {
+      font-size: clamp(1.5rem, 2.8vw, 2.4rem);
+      margin: 0;
+      line-height: 1.05;
+    }
+
+    .lead {
+      font-size: 1rem;
+      color: v.$muted;
+      max-width: 48rem;
+    }
+  }
+
+  &-image {
+    flex: 1 1 46%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: v.$radius;
+      box-shadow: 0 6px 18px rgba(2, 6, 23, 0.06);
+      max-width: 640px;
+    }
+  }
+}
+
+/* Seção Sobre */
+.sobre {
+  padding: 2.25rem 0;
+
+  &-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: center;
+  }
+}
+
+/* Serviços */
+.servicos {
+  padding: 2.5rem 0;
+
+  &-grid {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Depoimentos */
+.depoimentos {
+  padding: 2rem 0;
+
+  &-list {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Contato */
+.contato {
+  padding: 2.5rem 0;
+
+  &-grid {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid rgba(15, 23, 42, 0.04);
+  padding: 1.25rem 0;
+  background: transparent;
+
+  .footer-inner {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .servicos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .depoimentos-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sobre-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-inner {
+    flex-direction: column-reverse;
+    min-height: auto;
+    gap: 1.25rem;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-inner {
+    padding: 1rem 0;
+  }
+
+  .servicos-grid,
+  .depoimentos-list,
+  .contato-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .logo-text {
+    display: none;
+  }
+}
+
+@media (min-width: 1400px) {
+  :root {
+    /* uso de operador de tamanho proporcional (exemplo) */
+    --container-max: #{v.$container-max + 200px};
+  }
+
+  .hero-inner {
+    min-height: 72vh;
+  }
+}
